@@ -3,18 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+// component = html + css + js
+const MyComponent = () => {
+  return (
+    <div> hello component </div>
+  );
+}
+
 const App = () => {
   const [count, setCount] = useState(0)
-
-
-  // function myFunction() {
-  //   console.log("run function")
-  // }
-
-  const myFunction = () => {
-    console.log("run arrow function");
-  }  
-myFunction();
 
   return (
     <>
@@ -27,6 +24,7 @@ myFunction();
         </a>
       </div>
       <h1>Hello React</h1>
+      <MyComponent/>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -39,7 +37,7 @@ myFunction();
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
 export default App
