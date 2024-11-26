@@ -3,19 +3,28 @@ import TodoData from './components/todo/TodoData';
 import TodoNew from './components/todo/TodoNew';
 import reactLogo from './assets/react.svg'
 
-const svFpt = "Liam";
-const age = 20;
-const data = {
-  address: "danang",
-  country: "vietnam" 
-}
+
 const App = () => {
   
+  const svFpt = "Liam";
+  const age = 20;
+  const data = {
+    address: "danang",
+    country: "vietnam" 
+  }
+
+  const addNewTodo = (name) => {
+    alert(`call me ${name}`)
+  }
+
+
 
   return (
    <div className="todo-container">
      <div className="todo-title">Todo List</div>
-     <TodoNew />
+     <TodoNew 
+         addNewTodo={ addNewTodo } //truyen function nen khong co (), thuc thi function thi moi co ()
+     />
      <TodoData 
         name = {svFpt}
         age = {age}
