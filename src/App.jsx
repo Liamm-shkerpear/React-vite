@@ -32,12 +32,27 @@ const App = () => {
      <TodoNew 
          addNewTodo={ addNewTodo } //truyen function nen khong co (), thuc thi function thi moi co ()
      />
+
+  {todoList.length > 0 ?
+      <TodoData 
+          todoList = {todoList}
+      />
+  :
+      <div className="todo-image">
+          <img src={ reactLogo } className="logo"/>
+      </div>
+  }
+
+{/* {todoList.length > 0 &&
      <TodoData 
         todoList = {todoList}
      />
+}
+{todoList.length === 0 &&
      <div className="todo-image">
         <img src={ reactLogo } className="logo"/>
      </div>
+} */}
    </div>
   );
 }
